@@ -1,6 +1,6 @@
 {
   "name": "@davidparys/gatsby-plugin-directory-named-index",
-  "version": "1.1.2",
+  "version": "1.0.1",
   "description": "Gatsby plugin that wraps directory-named-webpack-plugin",
   "scripts": {
     "build": "babel src --out-dir .",
@@ -22,9 +22,6 @@
     "directory",
     "resolve"
   ],
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "author": "David Parys <parys.david@gmail.com>",
   "license": "MIT",
   "devDependencies": {
