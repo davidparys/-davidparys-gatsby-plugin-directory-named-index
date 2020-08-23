@@ -1,25 +1,17 @@
-const path = require('path')
-const DirectoryNamedWebpackPlugin = require('directory-named-webpack-plugin')
-
+const path = require("path");
+const DirectoryNamedWebpackPlugin = require("directory-named-webpack-plugin");
+var path = require("path");
 exports.onCreateWebpackConfig = ({ stage, actions }, { include, ...opts }) => {
   const options = {
     honorIndex: false,
-    exclude: [
-      path.resolve('./src/pages'),
-      /node_modules/
-    ],
-    include: [
-      path.resolve('./src'),
-      ...(include || [])
-    ],
-    ...opts
-  }
+    exclude: [path.resolve("./src/pages"), /node_modules/],
+    include: [path.resolve("./src"), ...(include || [])],
+    ...opts,
+  };
 
   actions.setWebpackConfig({
     resolve: {
-      plugins: [
-        new DirectoryNamedWebpackPlugin(options)
-      ]
-    }
-  })
-}
+      plugins: [new DirectoryNamedWebpackPlugin(options)],
+    },
+  });
+};
